@@ -1,0 +1,86 @@
+@import "../../../sass/abstracts/variables";
+
+.aboutMe {
+  background: linear-gradient(rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.8)),
+    url("../../../assets/images/about_bg.jpg");
+  background-size: cover;
+  width: calc(100vw - 20vw);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  &__largeTextPat,
+  &__largeTextMin {
+    //TODO: Add font style for the large text into index.css and index.js
+    position: absolute;
+    width: 50%;
+    font-family: $font-style-background;
+    font-size: 25rem;
+    color: $color-grey-dark;
+    opacity: 0.2;
+    // display: none;
+  }
+  &__largeTextPat {
+    bottom: 15rem;
+    right: 24rem;
+  }
+  &__largeTextMin {
+    bottom: -5rem;
+    right: 12rem;
+  }
+
+  .polaroids {
+    position: absolute;
+    top: 27rem;
+    left: 5rem;
+    z-index: 60;
+    transform: rotate(-22deg);
+    &__1 {
+      position: relative;
+      transform: rotate(-16deg);
+    }
+    &__2 {
+      position: relative;
+      transform: rotate(-5deg) translate(2.5rem, -5rem);
+    }
+    &__3 {
+      position: relative;
+      transform: rotate(7deg) translate(3.5rem, -11rem);
+    }
+  }
+
+  .content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70rem;
+    border-top: 1px solid $color-grey-dark;
+    padding: 3rem 10rem 8rem 15rem;
+    z-index: 50;
+
+    &__title {
+      font-size: 2.5rem;
+      font-family: $font-style-heading;
+      font-weight: $font-bold;
+      color: $color-white;
+      padding-bottom: 1rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+      font-family: $font-style-heading;
+      font-weight: $font-normal;
+      color: $color-grey-dark;
+      padding-bottom: 1rem;
+    }
+
+    &__description {
+      font-size: 1.6rem;
+      font-family: $font-style-paragraph;
+      font-weight: $font-light;
+      color: $color-white;
+      line-height: 1.25;
+      //letter-spacing: 1px;
+    }
+  }
+}

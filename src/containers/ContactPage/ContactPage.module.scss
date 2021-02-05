@@ -1,0 +1,153 @@
+@import "../../sass/abstracts/variables";
+
+.contactPage {
+  background: $color-contact-bg;
+  color: $color-white;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  &__blackBg {
+    width: 65vw;
+    height: 100vh;
+    background: $color-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .locationIcon {
+    position: absolute;
+    bottom: 0rem;
+    right: 25rem;
+    z-index: 20;
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    padding: 7.5rem 5rem;
+    .borderContainer {
+      border: 1px solid $color-grey-dark;
+      width: calc(100vw - 10rem);
+      height: calc(100vh - 15rem);
+      position: relative;
+      padding: 2rem; //! change this
+      z-index: 50;
+
+      &__label {
+        position: absolute;
+        top: -1.75rem;
+        left: 4rem;
+        font-size: 2.5rem;
+        background: $color-black;
+        padding: 0rem 0.5rem;
+        color: $color-grey-dark;
+        font-family: $font-style-heading;
+        font-weight: $font-light;
+        text-transform: uppercase;
+      }
+
+      .topText {
+        font-size: 4rem;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        width: 200%;
+        color: $color-grey;
+        padding: 1rem 0rem;
+        position: relative;
+        z-index: 50;
+        font-family: $font-style-handwritten;
+        letter-spacing: 0.2rem;
+        text-transform: lowercase;
+      }
+
+      .letsBuild {
+        font-size: 8.9rem;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        width: 200%;
+        color: $color-white;
+        line-height: 0.65;
+        position: relative;
+        z-index: 50;
+        font-family: $font-style-heading;
+        font-weight: $font-normal;
+        .gold {
+          color: $color-gold;
+        }
+      }
+
+      .email {
+        font-size: 8.25rem;
+        color: $color-white;
+        transition: 0.2s ease;
+        text-decoration: none;
+        position: relative;
+        z-index: 50;
+        font-family: $font-style-heading;
+        font-weight: $font-bold;
+        &:hover {
+          color: $color-gold;
+        }
+      }
+
+      .links {
+        position: absolute;
+        bottom: 5rem;
+        left: 5rem;
+        .link {
+          display: flex;
+          align-items: center;
+          padding: 0.2rem 0rem;
+          text-decoration: none;
+          &__icon {
+            width: 4.25rem;
+            height: 4.25rem;
+            //background: yellow;
+            g path {
+              fill: $color-grey;
+            }
+          }
+
+          &__label {
+            transform: translateY(-0.5rem);
+            color: $color-grey;
+            font-size: 1.75rem;
+            font-family: $font-style-computer;
+          }
+
+          &:hover {
+            & > .link__icon {
+              g path {
+                fill: $color-grey-light;
+              }
+            }
+            & > .link__label {
+              color: $color-grey-light;
+            }
+          }
+        }
+      }
+
+      .basedIn {
+        position: absolute;
+        bottom: 12.5rem;
+        right: 15rem;
+        //background: orange;
+
+        &__text {
+          font-size: 1.4rem;
+          padding-bottom: 1rem;
+          font-family: $font-style-paragraph;
+          font-weight: $font-light;
+        }
+
+        &__location {
+          font-size: 2rem;
+          font-family: $font-style-computer;
+        }
+      }
+    }
+  }
+}

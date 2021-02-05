@@ -1,0 +1,57 @@
+@import "../../sass/abstracts/variables";
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  padding: 1rem 2rem;
+
+  &__links {
+    float: left;
+    font-size: 1.2rem;
+    .link {
+      margin: 0rem 1.5rem;
+      color: $color-grey;
+      position: relative;
+      text-decoration: none;
+      font-family: $font-style-heading;
+      font-weight: $font-light;
+
+      //!!!!!!!!!!!
+      cursor: default; //! CHANGE THIS AS I WILL COMPLETELY CHANGE THE STYLE OF THE CURSOR
+      //!!!!!!!!!!!!
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -0.25rem;
+        left: 0;
+        height: 1px;
+        width: 0%;
+        //background: $color-grey;
+        background: $color-gold;
+        border-radius: 1rem;
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    float: right;
+    font-size: 1.2rem;
+
+    .text {
+      color: $color-grey;
+      font-family: $font-style-heading;
+      font-weight: $font-light;
+    }
+  }
+}

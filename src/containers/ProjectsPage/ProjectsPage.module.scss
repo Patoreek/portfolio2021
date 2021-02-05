@@ -1,0 +1,87 @@
+@import "../../sass/abstracts/variables";
+
+.projectsPage {
+  color: white;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: $color-offblack;
+
+  &__greyBg {
+    width: 37.5vw;
+    height: 100%;
+    background: $color-contact-bg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  .content {
+    padding: 7.5rem 10rem;
+    position: relative;
+    z-index: 50;
+
+    &__my,
+    &__projects {
+      font-size: 10rem;
+      font-family: $font-style-heading;
+      font-weight: $font-bold;
+    }
+
+    &__projects {
+      padding-left: 7.5rem;
+    }
+
+    &__subtitle {
+      padding: 2rem 0rem 1rem 0rem;
+      font-size: 2rem;
+      font-family: $font-style-heading;
+      font-weight: $font-light;
+      color: $color-grey-dark;
+    }
+
+    &__findOutMore {
+      padding: 0rem 0rem 9rem 0rem;
+      font-size: 2rem;
+      font-family: $font-style-heading;
+      font-weight: $font-light;
+      color: $color-grey-dark;
+    }
+
+    &__github {
+      color: $color-grey-dark;
+      text-decoration: none;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+
+    .projects {
+      //background: rgba(orange, 0.5);
+      display: flex;
+      flex-direction: column;
+      a {
+        text-decoration: none;
+      }
+
+      &__locus {
+        align-self: flex-start;
+        margin-left: 5rem;
+      }
+      &__momento {
+        align-self: flex-end;
+        margin-right: 15rem;
+      }
+      &__luxspaces {
+        align-self: flex-start;
+        margin-left: 15rem;
+      }
+      &__brighte {
+        align-self: flex-end;
+        margin-right: 15rem;
+      }
+    }
+  }
+}

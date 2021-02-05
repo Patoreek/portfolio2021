@@ -1,0 +1,13 @@
+@import "./sass/abstracts/variables";
+@import "./sass/abstracts/functions";
+@import "./sass/abstracts/mixins";
+
+@import "./sass/base/animations";
+@import "./sass/base/utilities";
+@import "./sass/base/base";
+
+.app {
+  width: 100vw;
+  height: auto;
+  //background: #000;
+}
