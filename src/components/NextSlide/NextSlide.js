@@ -6,6 +6,7 @@ import { ReactComponent as ArrowSVG } from "../../assets/icons/slide_arrow.svg";
 import webDevImg from "../../assets/images/keyboard_monitors.jpg";
 
 import { SlideContext } from "../../context/GlobalContext";
+import { motion } from "framer-motion";
 
 const NextSlide = () => {
   const [slide, setSlide] = useContext(SlideContext);
@@ -62,7 +63,9 @@ const NextSlide = () => {
   };
 
   return (
-    <div className={classes.nextSlide}>
+    <motion.div
+      className={classes.nextSlide} /* whileTap={{ width: "100vw" }} */
+    >
       <img src={webDevImg} className={classes.nextSlide__image} />
       <div className={classes.content}>
         <div className={classes.content__title}>
@@ -79,7 +82,7 @@ const NextSlide = () => {
           <p>Next Slide</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

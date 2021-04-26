@@ -8,6 +8,7 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
+  z-index: 10;
 
   &__largeTextPat,
   &__largeTextMin {

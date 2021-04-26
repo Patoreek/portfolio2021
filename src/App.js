@@ -11,15 +11,44 @@ import ContactPage from "./containers/ContactPage/ContactPage";
 
 import { PageContext } from "./context/GlobalContext";
 
+import { motion } from "framer-motion";
+
+const pageVariants = {
+  hidden: {
+    opacity: 0,
+    y: "-100vh",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0,
+      duration: 0.5,
+    },
+  },
+};
+
 function App() {
   const [page, setPage] = useContext(PageContext);
   return (
     <div className={classes.app}>
       <Navbar />
       <Footer />
-      {page == "About" ? <AboutPage /> : null}
-      {page == "Projects" ? <ProjectsPage /> : null}
-      {page == "Contact" ? <ContactPage /> : null}
+      {page == "About" ? (
+        <motion.div variants={pageVariants} initial="hidden" animate="visible">
+          <AboutPage />
+        </motion.div>
+      ) : null}
+      {page == "Projects" ? (
+        <motion.div variants={pageVariants} initial="hidden" animate="visible">
+          <ProjectsPage />
+        </motion.div>
+      ) : null}
+      {page == "Contact" ? (
+        <motion.div variants={pageVariants} initial="hidden" animate="visible">
+          <ContactPage />
+        </motion.div>
+      ) : null}
     </div>
   );
 }

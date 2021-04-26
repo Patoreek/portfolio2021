@@ -4,19 +4,134 @@ import classes from "./WebDev.module.scss";
 import laptopImg from "../../../assets/images/laptop.jpg";
 import keyboardImg from "../../../assets/images/keyboard_monitors.jpg";
 
+import { motion } from "framer-motion";
+
+const smallTitleVariants = {
+  hidden: {
+    x: -500,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 1.5,
+      duration: 2,
+    },
+  },
+};
+
+const largeTitleVariants = {
+  hidden: {
+    x: 300,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 2,
+      duration: 1.5,
+    },
+  },
+};
+
+const laptopVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 2,
+      duration: 1.5,
+    },
+  },
+};
+
+const splitContainerVariants = {
+  hidden: {
+    y: 500,
+  },
+  visible: {
+    y: 0,
+    transition: {
+      delay: 2,
+      duration: 1.5,
+    },
+  },
+};
+
+const contentVariants = {
+  hidden: {
+    y: 500,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 2,
+      duration: 2,
+    },
+  },
+};
+
+const imageVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 2,
+      duration: 2.15,
+    },
+  },
+};
 const WebDev = () => {
   return (
     <div className={classes.webDev}>
       <div className={classes.webDev__title}>
-        <h3 className={classes.smallTitle}>Junior Fullstack JavaScript</h3>
+        <motion.h3
+          className={classes.smallTitle}
+          variants={smallTitleVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          Junior Fullstack JavaScript
+        </motion.h3>
 
-        <h1 className={classes.largeTitle}>Web Developer</h1>
+        <motion.h1
+          className={classes.largeTitle}
+          variants={largeTitleVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          Web Developer
+        </motion.h1>
       </div>
-      <img src={laptopImg} className={classes.laptopImg} />
+      <motion.img
+        src={laptopImg}
+        className={classes.laptopImg}
+        variants={laptopVariants}
+        initial="hidden"
+        animate="visible"
+      />
 
-      <div className={classes.splitContainer}>
+      <motion.div
+        className={classes.splitContainer}
+        variants={splitContainerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className={classes.contentContainer}>
-          <p className={classes.contentContainer__content}>
+          <motion.p
+            className={classes.contentContainer__content}
+            variants={contentVariants}
+            initial="hidden"
+            animate="visible"
+          >
             Mauris vel ex ac eros malesuada varius ac semper lorem. Cras commodo
             id felis eget feugiat. Aliquam dictum ligula lacus. Curabitur sed
             nunc dictum, vehicula risus nec, ullamcorper turpis. Fusce vitae
@@ -26,14 +141,20 @@ const WebDev = () => {
             risus. Ut sit amet purus felis. Proin luctus non tellus sed mattis.
             Integer at odio feugiat, pretium turpis at, suscipit dui. Morbi non
             quam libero. Integer eget eleifend risus, ac convallis lorem.
-          </p>
+          </motion.p>
         </div>
         <div className={classes.imageContainer}>
           <div className={classes.imageContainer__imageContainer}>
-            <img src={keyboardImg} className={classes.image} />
+            <motion.img
+              src={keyboardImg}
+              className={classes.image}
+              variants={imageVariants}
+              initial="hidden"
+              animate="visible"
+            />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

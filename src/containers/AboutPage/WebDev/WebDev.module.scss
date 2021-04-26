@@ -10,7 +10,7 @@
 
   .laptopImg {
     width: 80rem;
-    transform: scaleX(-1); //* Flips the image
+    transform: scaleX(-1) translate(-8vh, -9vh); //* Flips the image
     position: absolute;
     top: -0rem;
     right: -10rem;
@@ -18,7 +18,7 @@
   }
 
   &__title {
-    padding: 50vh 0rem 0rem 7rem;
+    padding: 40vh 0rem 0rem 7rem;
     .smallTitle {
       position: relative;
       z-index: 25;
